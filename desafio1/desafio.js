@@ -1,24 +1,17 @@
-const products = []
-
 class ProductManager{
+    products = []
     static id = 1;
-    constructor(title, description, price, thumbnail, code, stock){
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.thumbnail = thumbnail;
-        this.code = code;
-        this.stock = stock;
-        ProductManager.id;
+    constructor(){
+        this.products = [];
     }
-    addProduct(){
+    addProduct(title , description, price, thumbnail, code, stock){
         const producto = ({
-            title: this.title,
-            description: this.description,
-            price: this.price,
-            thumbnail: this.thumbnail,
-            code: this.code,
-            stock: this.stock,
+            title,
+            description,
+            price,
+            thumbnail,
+            code,
+            stock,
             id : ProductManager.id
         })
 
@@ -26,29 +19,30 @@ class ProductManager{
             throw new Error('todos los datos son obligatorios')
         }
 
-        const codeVerificador = products.find(element => element.code === producto.code)
+        const codeVerificador = this.products.find(element => element.code === producto.code)
         if(codeVerificador){
             return console.log('Ya existe un producto con este code')
         }
 
-        products.push(producto)
+        this.products.push(producto)
         ProductManager.id++;
     }
     getProducts(){
-        return console.log(products)
+        return console.log(this.products)
     }
     getProductById(id){
-        const productoPorId = products.find(element => element.id === id)
+        const productoPorId = this.products.find(element => element.id === id)
         productoPorId ? console.log(productoPorId) : console.log ('Not Found')
     }
 }
 
 
-const prod1 = new ProductManager('Colchoneta', 'Colchoneta Inflable', 300, '###', 134, 12);
-prod1.addProduct()
-const prod2 = new ProductManager('Tobogan', 'Tobogan Deslisante', 600, '##', 200, 500);
-prod2.addProduct()
+const prod1 = new ProductManager();
+prod1.addProduct('Colchoneta', 'Colchoneta Inflable', 300, '###', 134, 12)
 
+prod1.getProducts()
 
-prod1.getProductById(5)
-prod2.getProducts()
+prod1.addProduct('Alfajor', 'Alfajor Jorgito', 500, '###', 1544, 1234)
+prod1.getProducts()
+
+prod1.getProductById(2)
