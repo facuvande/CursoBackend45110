@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "title": "Lámpara Tokio",
+    "description": "Lámpara escritorio aluminio negro led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 2,
+    "title": "Double SH",
+    "description": "Embutido retraible doble cabezal móvil aluminio blanco led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 3,
+    "title": "Berilo",
+    "description": "Plafon circular aluminio negro  led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 4,
+    "title": "Hat",
+    "description": "Lámpara de píe difusora aluminio negra led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 5,
+    "title": "Adel",
+    "description": "Aplique circular estanco aluminio negro led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 6,
+    "title": "Tuel",
+    "description": "Embutido antideslumbrante aluminio blanco GU10 led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 7,
+    "title": "Lámpara Tokio",
+    "description": "Lámpara escritorio aluminio negro led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 9,
+    "title": "Lámpara Tokio",
+    "description": "Lámpara escritorio aluminio negro led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "id": 10,
+    "title": "Lámpara Tokio",
+    "description": "Lámpara escritorio aluminio negro led",
+    "price": 2200,
+    "thumbnail": "ruta de imagen",
+    "code": 101,
+    "stock": 3
+  },
+  {
+    "title": "producto desde form-data6",
+    "description": "Producto con el que subimos una img",
+    "code": "asdasdbvb",
+    "price": "456",
+    "stock": "12",
+    "category": "consoladores",
+    "status": "true",
+    "thumbnail": [null],
+    "id": 11
+  },
+  {
+    "title": "producto desde form-dat56",
+    "description": "Producto con el que subimos una img",
+    "code": "gggg",
+    "price": "456",
+    "stock": "12",
+    "category": "consoladores",
+    "status": "true",
+    "id": 12
+  },
+  {
+    "title": "producto desde form-dat56",
+    "description": "Producto con el que subimos una img",
+    "code": "asdasdasd",
+    "price": "456",
+    "stock": "12",
+    "category": "consoladores",
+    "status": "true",
+    "id": 13
+  },
+  {
+    "title": "producto desde form-dat56",
+    "description": "Producto con el que subimos una img",
+    "code": "test-ultimo",
+    "price": "456",
+    "stock": "12",
+    "category": "consoladores",
+    "status": "true",
+    "thumbnail": ["1677344344298-diego.jpg", "1677344344301-error.jpg"],
+    "id": 15
+  },
+  {
+    "title": "producto para el test",
+    "description": "Descripcion del producto",
+    "code": "mmnfjj32",
+    "price": 369,
+    "stock": "150",
+    "category": "mates",
+    "status": "true",
+    "thumbnail": ["1677538529058-error.jpg"],
+    "id": 16
+  },
+  {
+    "title": "Producto para el test2",
+    "description": "Producto para probar el test numero 2",
+    "code": "mnbjjfmem3348",
+    "price": 369,
+    "stock": 369,
+    "category": "mates",
+    "status": "false",
+    "thumbnail": [
+      "1677539191912-trenes.jpg",
+      "1677539191913-xd.jpg",
+      "1677539191915-xd1.jpg"
+    ],
+    "id": 17
+  }
+]
