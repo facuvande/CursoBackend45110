@@ -15,7 +15,7 @@ route.post('/', async (req, res) =>{
     }
 })
 
-route.post('/:cid', async (req, res) =>{
+route.get('/:cid', async (req, res) =>{
     const cid = Number(req.params.cid)
     const product = await cart.getCartProductsById(cid);
 
