@@ -2,6 +2,7 @@ import { Router } from "express";
 import { ProductManager } from "../data/productos.js";
 import { validarProducto, validarProductoParcial } from "../data/validacion.js";
 import { imgsUploader } from "../utils/imgsUploader.js";
+import fs from 'fs'
 const productoManager = new ProductManager('./data/products.json')
 
 const route = Router();
@@ -30,10 +31,12 @@ route.get('/:pid', async (req, res) =>{
     }
 })
 
-route.post('', imgsUploader.array('file', undefined) ,async (req, res)=>{
+
+route.post('',imgsUploader.array('file', undefined) ,async (req, res)=>{
     const producto = req.body;
     const img = req.files
 
+    
     // Debido a que si ponemos mas de una imagen req.files me otorga 2 objetos 1 por imagen, no puedo acceder con req.files.filename por lo tanto uso este metodo para extraer sus respectivos filename y guardarlo en la constante filenames
     const filenames = []
 
@@ -51,12 +54,11 @@ route.post('', imgsUploader.array('file', undefined) ,async (req, res)=>{
             
         }
     }
-
     const status = producto.status;
     if(!status){
         producto.status = 'true'
     }
-
+    
     producto.price = Number(producto.price)
     producto.stock = Number(producto.stock)
     
@@ -81,7 +83,7 @@ route.put('/:pid', async (req, res) => {
         return;
     }
     const nuevosDatos = req.body;
-    console.log(nuevosDatos)
+
     const esValido = validarProductoParcial(nuevosDatos);
     if (!esValido) {
       res.status(400).send({

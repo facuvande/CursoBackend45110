@@ -86,7 +86,7 @@
     "code": "asdasdbvb",
     "price": "456",
     "stock": "12",
-    "category": "consoladores",
+    "category": "comida",
     "status": "true",
     "thumbnail": [null],
     "id": 11
@@ -97,7 +97,7 @@
     "code": "gggg",
     "price": "456",
     "stock": "12",
-    "category": "consoladores",
+    "category": "comida",
     "status": "true",
     "id": 12
   },
@@ -107,7 +107,7 @@
     "code": "asdasdasd",
     "price": "456",
     "stock": "12",
-    "category": "consoladores",
+    "category": "comida",
     "status": "true",
     "id": 13
   },
@@ -117,7 +117,7 @@
     "code": "test-ultimo",
     "price": "456",
     "stock": "12",
-    "category": "consoladores",
+    "category": "comida",
     "status": "true",
     "thumbnail": ["1677344344298-diego.jpg", "1677344344301-error.jpg"],
     "id": 15
@@ -147,5 +147,16 @@
       "1677539191915-xd1.jpg"
     ],
     "id": 17
+  },
+  {
+    "title": "Producto Prueba",
+    "description": "Test para ver q no se guarden las imagenes",
+    "price": 8574,
+    "stock": 58,
+    "code": "mnbjjfmem3349",
+    "category": "termos",
+    "status": "true",
+    "thumbnail": ["1677681661856-profe.jpg"],
+    "id": 18
   }
 ]

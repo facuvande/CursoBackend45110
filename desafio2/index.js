@@ -7,29 +7,21 @@ class ProductManager {
     }
 
     readFile() {
-
         try {
-        
-        const data = JSON.parse(fs.readFileSync(`./${this.path}`, "utf-8"));
-        
-        return data;
-        
+            const data = JSON.parse(fs.readFileSync(`./${this.path}`, "utf-8"));
+            return data;
         } catch (error) {
-        
-        return []
-        
+            return []
         }
-        
-        }
-
+    }
+    
     writeData(data) {
-    let dataString = JSON.stringify(data);
-    fs.writeFileSync(`./${this.path}`, dataString);
+        let dataString = JSON.stringify(data);
+        fs.writeFileSync(`./${this.path}`, dataString);
     }
 
 
     addProducts(product) {     
-        
         //Creo la variable utilizando this.readfile
         let listado = this.readFile();
         const checkInCart = listado.find(p => p.code === product.code)
@@ -45,8 +37,6 @@ class ProductManager {
                 console.log("ERROR - Please check the information and try again")
             }
         else {
-            
-            
             product.id = listado.length > 0 ? listado[listado.length - 1].id + 1 : 1;
             listado.push(product)
             this.writeData(listado)
@@ -55,60 +45,44 @@ class ProductManager {
 
     getProducts () {
         try {
-        
             const data = JSON.parse(fs.readFileSync(`./${this.path}`, "utf-8"));
-            
             return data;
-            
             } catch (error) {
-            
-            return []
-            
-            }
-            
-            }
+                return []
+            }    
+        }
 
 
-// const isInCart = (id) => { return products.find (product =>product.title ===title) }
+    // const isInCart = (id) => { return products.find (product =>product.title ===title) }
 
 
-getProductsById (id){
-
-    const products = this.readFile();
-
-    const search = products.find(product => product.id === id) 
-
-if (search == undefined) {
-console.log( "Product not found")
-}
-else {
-
-return search 
-}
-}
-
-isInProducts  (title)  {
-    products.find (prod => prod.title === title)
-}
-
-
-
-
-updateProduct(id, product){
-
-    let data = this.readFile ();
-    if(data.find(product=>product.id===id)){
-        let productDeleted = data.filter(product => product.id!==id)
-        product.id=id;
-        productDeleted.push(product);
-        this.writeData(productDeleted);
-        return productDeleted;
-
+    getProductsById (id){
+        const products = this.readFile();
+        const search = products.find(product => product.id === id) 
+        if (search == undefined) {
+            console.log( "Product not found")
+        }else {
+            return search 
+        }
     }
-    else{
-        console.log('The product to be updated does not exist')
+
+    isInProducts  (title)  {
+        products.find (prod => prod.title === title)
     }
-}
+
+    updateProduct(id, product){
+
+        let data = this.readFile ();
+        if(data.find(product=>product.id===id)){
+            let productDeleted = data.filter(product => product.id!==id)
+            product.id=id;
+            productDeleted.push(product);
+            this.writeData(productDeleted);
+            return productDeleted;
+        }else{
+            console.log('The product to be updated does not exist')
+        }
+    }
 
 
 async deleteProduct (id){
