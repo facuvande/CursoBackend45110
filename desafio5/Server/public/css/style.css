@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* **********     Reset CSS     ********** */
+:root {
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --container-width: 1200px;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+header{
+    background-color: #11a3cf;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgContainer img{
+    width: 80px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+header ul li a{
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    background-color: #1111112f;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .5s;
+}
+header ul li a:hover{
+    transition: .5s;
+    background-color: #1111115b
+}
+
+/* Home Handlebars */
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 90vh;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin: 50px;
+}
+
+.products_container{
+    background-color: white;
+    box-shadow: 6px 0px 25px 0px rgba(0, 0, 0, 1);
+    margin-bottom: 50px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.product{
+    box-shadow:
+    0px 0px 2.4px -3px rgba(0, 0, 0, 0.129),
+    0px 0px 6.5px -3px rgba(0, 0, 0, 0.185),
+    0px 0px 15.7px -3px rgba(0, 0, 0, 0.241),
+    0px 0px 52px -3px rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+    text-align: center;
+}
+.product img{
+    height: 50%;
+}
+.product h2{
+    font-size: 30px;
+    margin: 0;
+}
+.product .description{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+.product .price{
+    font-size: 25px;
+    font-weight: 600;
+}
+.product button{
+    background: black;
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 5%;
+}
+.product button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 620px){
+    .products_container{
+        width: 96vw;
+    }
+    .product{
+        height: 480px;
+        width: 100%;
+    }
+    .products{
+        justify-items: center;
+    }
+    .form {
+        font-size: 2rem;
+        width: 100%;
+
+    }
+}
+
+/* RealTimeProducts */
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+.table caption{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.table tr{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.table th, .table td{
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead th{
+    text-transform: uppercase;
+    background-color: #ddd;
+}
+
+.table tbody tr:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table tbody td:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px){
+    .table{
+        border: 0px;
+    }
+    .table caption{
+        font-size: 22px;
+    }
+    .table thead{
+        display: none;
+    }
+    .table tr{
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th, .table td{
+        font-size: 12px;
+    }
+    .table td{
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table td:last-child{
+        border-bottom: 0px;
+    }
+    .table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
+
+.dnone{
+    display: none;
+}
